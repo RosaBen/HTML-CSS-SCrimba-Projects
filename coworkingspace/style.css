@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  color: #282828;
+}
+
+/* layouts */
+
+header {
+  background-color: #282828;
+  color: whitesmoke;
+}
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.item {
+  position: relative;
+}
+
+/* typos */
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 30px 25px;
+}
+
+/* lists */
+ul {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+  list-style: none;
+}
+li {
+  cursor: pointer;
+}
+
+.align-right {
+  margin-left: auto;
+}
+
+/* images */
+
+.caption {
+  margin: 0 25px;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 25px;
+}
+
+.item-img {
+  width: 100%;
+  display: block;
+}
+
+.img-banner {
+  background-color: #cd6858;
+  color: whitesmoke;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* buttons */
+
+button {
+  border: none;
+  background-color: #cd6858;
+  color: whitesmoke;
+  padding: 10px 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* popup */
+
+.chatbox-bg {
+  background-color: #dda15e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #999;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+}
+
+.chatbox-img {
+  width: 50%;
+  align-self: center;
+}
