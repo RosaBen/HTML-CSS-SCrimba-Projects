@@ -130,12 +130,22 @@ header,
   margin: 0 auto 2rem;
 }
 
+.section-two-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .feature-image {
   width: 100%;
   border-radius: 4.6px;
   margin-bottom: 1rem;
 }
 
+.feature-item {
+  flex-basis: 260px;
+  flex-grow: 1;
+}
 footer {
   text-align: center;
   color: #5f29a3;

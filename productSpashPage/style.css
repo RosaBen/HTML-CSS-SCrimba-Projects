@@ -1,0 +1,95 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #404040;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-shadow: 0 2px #816fca;
+}
+
+h2 {
+  margin: 0.167rem 0;
+  font-size: 2.25rem;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+
+.beta-text,
+.subheading {
+  text-transform: uppercase;
+}
+.beta-text {
+  font-weight: 900;
+}
+
+.subheading {
+  color: #575757;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.intro,
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro {
+  color: #fff;
+  background-color: #9480e4;
+
+  min-height: 250px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* ====================
+    Main content
+   ==================== */
+
+.main-content {
+  align-items: center;
+  padding: 2.5rem 2rem 0;
+}
+
+.img-main {
+  width: 120px;
+  border-radius: 50%;
+}
+
+/* =================
+    Form
+   ================= */
+
+/* =================
+    Media queries 
+   ================= */
+
+@media (min-width: 576px) {
+  body {
+    display: flex;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+    /* flex: 1; */
+    /* flex-basis: 50%; */
+  }
+}
