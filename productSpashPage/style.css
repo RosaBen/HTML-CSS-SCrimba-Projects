@@ -11,14 +11,14 @@ body {
    ================= */
 
 h1 {
-  font-weight: 400;
   font-size: 2.5rem;
+  font-weight: 400;
   text-shadow: 0 2px #816fca;
 }
 
 h2 {
-  margin: 0.167rem 0;
   font-size: 2.25rem;
+  margin: 0.167rem 0;
 }
 
 p {
@@ -26,10 +26,6 @@ p {
   line-height: 1.35;
 }
 
-.beta-text,
-.subheading {
-  text-transform: uppercase;
-}
 .beta-text {
   font-weight: 900;
 }
@@ -40,11 +36,36 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.beta-text,
+.subheading,
+.top-text {
+  text-transform: uppercase;
+}
+.top-text {
+  font-size: 0.875rem;
+  font-weight: 900;
+  padding-top: 0.25em;
+  border-top: 5px solid;
+  order: -1;
+  margin: 0 auto;
+}
+
+.fine-print {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #858585;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
 .intro,
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* =================
@@ -52,14 +73,13 @@ p {
    ================= */
 
 .intro {
-  color: #fff;
-  background: #9480e4 url("./images/intro-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  justify-content: space-between;
   min-height: 250px;
   text-align: center;
-  justify-content: center;
+  color: #fff;
+  background: #9480e4 url("images/intro-bg.png");
+  background-size: cover;
+  padding-bottom: 1.5rem;
 }
 
 /* ====================
@@ -68,7 +88,7 @@ p {
 
 .main-content {
   align-items: center;
-  padding: 2.5rem 0 0;
+  padding-top: 2.5rem;
 }
 
 .img-main {
@@ -76,9 +96,55 @@ p {
   border-radius: 50%;
 }
 
+.main-content p,
+form {
+  max-width: 450px;
+}
+
 /* =================
     Form
    ================= */
+
+input,
+.btn {
+  border-radius: 5px;
+  font-family: inherit; /* will take font family of the parent*/
+  width: 100%;
+  padding: 0.5rem;
+}
+
+input {
+  margin-bottom: 0.75rem;
+  border: 2px solid #d1d5db;
+}
+
+input:focus {
+  outline: none;
+  border-color: #8a71ec;
+  background-color: #e6e8ec;
+}
+
+.btn {
+  text-transform: uppercase;
+
+  border: none;
+
+  letter-spacing: 1px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.btn-primary {
+  margin-top: 1em;
+  background-color: #8a71ec;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #b7a7f6;
+}
 
 /* =================
     Media queries 
@@ -87,22 +153,6 @@ p {
 @media (min-width: 576px) {
   body {
     display: flex;
-  }
-
-  .intro {
-    min-height: 100vh;
-  }
-
-  .intro,
-  .main-content {
-    width: 50%;
-    /* flex: 1; */
-    /* flex-basis: 50%; */
-  }
-
-  .main-content {
-    justify-content: center;
-    padding-top: 0;
   }
 
   h1 {
@@ -115,5 +165,19 @@ p {
 
   .beta-text {
     font-size: 1.25rem;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+  }
+
+  .intro {
+    min-height: 100vh;
+  }
+
+  .main-content {
+    justify-content: center;
+    padding-top: 0;
   }
 }
