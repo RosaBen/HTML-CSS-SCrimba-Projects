@@ -8,7 +8,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Flex", sans-serif;
 }
 
 /* ===============
@@ -19,28 +18,16 @@ body {
   width: 100%;
   max-width: 390px;
   margin: 0 auto;
+  background-color: aquamarine;
 }
 
-/* Home */
-
-.home {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "head"
-    "hero"
-    "card"
-    "btnv";
-}
-
-/* Home-Header */
+/* Header */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  grid-area: head;
 }
 
 .title {
@@ -58,12 +45,80 @@ ul {
   gap: 3rem;
 }
 
-/* Home-Hero */
+/* Footer */
+
+footer {
+  background-color: #202020;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Home page */
 
 .hero-post {
   position: relative;
-  grid-area: hero;
 }
+
+#hero-article {
+  position: absolute;
+  width: 300px;
+  color: white;
+  top: 4rem;
+  left: 1rem;
+  margin: 0;
+}
+
+/* ==========
+   Typography
+   ========== */
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+h1 {
+  font-size: 0.85rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.date {
+  font-size: 0.7rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ==========
+     Images
+   ========== */
+
+.hero-img {
+  width: 390px;
+}
+/* 
+
+ */
+
+/* .home-page {
+  display: none;
+}
+
+
 
 .hero-article {
   position: absolute;
@@ -71,16 +126,41 @@ ul {
   top: 4rem;
   left: 1rem;
   width: 344px;
+} */
+
+/* article page */
+
+/* .article-page {
+  display: grid;
+  grid-template-columns: 0.05rem 1fr 0.05rem;
+  gap: 1rem;
+  grid-template-areas:
+    ".... prev ...."
+    ".... imga ...."
+    ".... desc ...."
+    ".... rect ...."
+    ".... card ....";
 }
 
-/* View more article */
-
-.view-more-article {
-  display: none;
+.post-article {
+  grid-area: prev;
 }
+
+.author-description {
+  grid-area: desc;
+}
+
+.recent-posts {
+  grid-area: rect;
+  text-align: center;
+} */
+
+/* Footer */
+
+/*  */
 
 /* Cards */
-.cards {
+/* .cards {
   grid-template-columns: 2rem 1fr 2rem;
   grid-area: card;
   grid-template-areas:
@@ -106,36 +186,11 @@ ul {
   max-width: 390px;
   margin: 0 auto;
   padding: 1rem 1rem;
-}
+} */
 
-/* Footer */
+/* 
 
-footer {
-  background-color: #202020;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-}
 
-/* ==========
-   Typography
-   ========== */
-
-li {
-  list-style: none;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-family: "Source Sans 3", sans-serif;
-}
-
-h1 {
-  font-size: 0.85rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin: 0;
-}
 
 h3 {
   font-size: 1.2rem;
@@ -145,34 +200,26 @@ h3 {
 .hero-post {
   color: white;
 }
-p {
+
+
+.preview-date {
   font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0.5rem 0;
-}
+} */
 
-footer p {
-  margin: 0;
-}
-
-.article-date-hero {
-  font-size: 0.9rem;
-}
-
-/* ==========
-     Images
-   ========== */
-
-.hero-post img {
+/* .hero-post img {
   width: 100%;
   max-width: 390px;
 }
 
 .card img,
-.article-img img {
+.article-img {
   width: 358px;
   border-radius: 2px;
 }
+
+.article-img {
+  grid-area: imga;
+} */
 
 /* ==========
       Links
@@ -181,11 +228,10 @@ footer p {
 /* ==========
      Buttons
    ========== */
-.button {
+/* .button {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  grid-area: btnv;
 }
 
 .view-more {
@@ -197,7 +243,7 @@ footer p {
   letter-spacing: 1px;
   text-decoration: underline;
   text-underline-offset: 3px;
-}
+} */
 
 /* ==========
    Responsive
