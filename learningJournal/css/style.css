@@ -11,28 +11,41 @@ body {
   font-family: "Roboto Flex", sans-serif;
 }
 
-/* ==========
-     Layout
-   ========== */
+/* ===============
+     Layout pages
+   =============== */
 
 .container {
   width: 100%;
-  max-width: 480px;
+  max-width: 390px;
   margin: 0 auto;
-  background-color: aquamarine;
 }
+
+/* Home */
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "head"
+    "hero"
+    "card"
+    "btnv";
+}
+
+/* Home-Header */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  grid-area: head;
 }
 
 .title {
   display: flex;
   gap: 0.2rem;
-  /* justify-content: start; */
 }
 
 nav {
@@ -43,6 +56,65 @@ nav {
 ul {
   display: flex;
   gap: 3rem;
+}
+
+/* Home-Hero */
+
+.hero-post {
+  position: relative;
+  grid-area: hero;
+}
+
+.hero-article {
+  position: absolute;
+  z-index: 1;
+  top: 4rem;
+  left: 1rem;
+  width: 344px;
+}
+
+/* View more article */
+
+.view-more-article {
+  display: none;
+}
+
+/* Cards */
+.cards {
+  grid-template-columns: 2rem 1fr 2rem;
+  grid-area: card;
+  grid-template-areas:
+    ".. cd1 .."
+    ".. cd2 .."
+    ".. cd3 ..";
+}
+
+.card-one {
+  grid-area: cd1;
+}
+
+.card-two {
+  grid-area: cd2;
+}
+
+.card-three {
+  grid-area: cd3;
+}
+
+.card {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: #202020;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 /* ==========
@@ -60,14 +132,73 @@ h1 {
   font-size: 0.85rem;
 }
 
-/* ==========
-   Responsive
-   ========== */
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.hero-post {
+  color: white;
+}
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.article-date-hero {
+  font-size: 0.9rem;
+}
 
 /* ==========
      Images
    ========== */
 
+.hero-post img {
+  width: 100%;
+  max-width: 390px;
+}
+
+.card img,
+.article-img img {
+  width: 358px;
+  border-radius: 2px;
+}
+
 /* ==========
       Links
+   ========== */
+
+/* ==========
+     Buttons
+   ========== */
+.button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  grid-area: btnv;
+}
+
+.view-more {
+  background: white;
+  border: none;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========
+   Responsive
    ========== */
