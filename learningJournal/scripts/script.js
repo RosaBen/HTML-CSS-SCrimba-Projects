@@ -5,20 +5,27 @@ import { cards, mainArticle, articles } from "./data.js";
 const navLinks = document.querySelectorAll("[data-page]");
 const pages = document.querySelectorAll(".page");
 const heroImg = document.getElementById("hero");
+const viewMoreBtn = document.getElementById("view-more");
+const homePage = document.getElementById("home-page");
+const articlePage = document.getElementById("article-page");
+const aboutPage = document.getElementById("about-page");
+const allPages = document.querySelectorAll(".page");
 
 // HTML contents
 
 const getMainArticle = (array) => {
-  const { poster, alt, date, title, description } = array;
-  const imgMain = document.createElement("img");
-  imgMain.src = poster;
-  imgMain.alt = alt;
-  imgMain.classList.add("main-img", "hero-img", "article-img");
-  heroImg.appendChild(imgMain);
+  const { date, title, description } = array;
   return `
     <p class="date">${date}</p>
     <h2>${title}</h2>
     <p class="main-text">${description}</p>
+  `;
+};
+
+const getMainImg = (array) => {
+  const { poster, alt } = array;
+  return `
+    <img src="${poster}" alt="${alt}">
   `;
 };
 
@@ -37,6 +44,20 @@ const getCards = (array) => {
   }).join("");
 
   return showCards;
+};
+
+const getJourneys = array => {
+  const showJourneys = array.map(journey => {
+    const { title, par1, par2 } = journey;
+    return `
+          <h4>${title}</h4>
+      <p>${par1}</p>
+      <br>
+      <p>${par2}</p>
+    `;
+  }).join("");
+
+  return showJourneys;
 };
 
 
@@ -67,14 +88,31 @@ navigatePage();
 
 // Addeventlistener
 
+viewMoreBtn.addEventListener("click", function () {
+  allPages.forEach(page => {
+    page.classList.remove("active");
+  });
+
+  articlePage.classList.add("active");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
 
 
 // Display html
 
 document.querySelector(".hero-article").innerHTML = getMainArticle(mainArticle);
+document.querySelector(".hero-img").innerHTML = getMainImg(mainArticle);
 document.getElementById("home-card").innerHTML = getCards(cards);
-document.getElementById("article-page").innerHTML = getMainArticle(mainArticle)
+document.querySelector(".main-article").innerHTML = getMainArticle(mainArticle);
+document.querySelector(".article-img").innerHTML = getMainImg(mainArticle);
+document.getElementById("article-journeys").innerHTML = getJourneys(articles);
+document.getElementById("article-card").innerHTML = getCards(cards);
+document.getElementById("about-card").innerHTML = getCards(cards);
+document.getElementById("about-journeys").innerHTML = getJourneys(articles)
 
 
 

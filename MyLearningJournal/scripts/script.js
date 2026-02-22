@@ -28,10 +28,7 @@ const journeyHtml = (array) => {
   const showJourneys = array(journey => {
     const { title, par1, par2 } = journey;
     return `
-      <h4>${title}</h4>
-      <p>${par1}</p>
-      <br>
-      <p>${par2}</p>
+
     `;
   }).join("");
 

@@ -16,10 +16,6 @@ body {
 
 /* To delete */
 
-.home {
-  display: none;
-}
-
 /* ===============
      Layout pages
    =============== */
@@ -90,6 +86,35 @@ footer {
 
 /* Article page */
 
+.article {
+  width: 340px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+
+.main {
+  padding-bottom: 0.5rem;
+}
+
+.main-article {
+  padding-bottom: 1.5rem;
+}
+
+/* Aboutme page */
+
+.about {
+  width: 340px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+
+.about-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
 /* Cards */
 
 .card {
@@ -123,8 +148,23 @@ h1 {
   padding-bottom: 0.6rem;
 }
 
+.article h2,
+.about-article h2 {
+  padding-bottom: 1rem;
+}
+
 h3 {
   padding-bottom: 0.4rem;
+}
+
+.recent-posts {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.journeys h4 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 h2,
@@ -160,14 +200,22 @@ footer p {
      Images
    ========== */
 
-.hero-img {
+.hero-img img {
   width: 100%;
   max-width: 390px;
   display: block;
 }
 
-.card-img {
+.card-img,
+.article-img img {
   width: 340px;
+  border-radius: 0.3rem;
+}
+
+.about-article img {
+  width: 182px;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 /* ==========
