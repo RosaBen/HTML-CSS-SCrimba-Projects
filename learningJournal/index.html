@@ -22,16 +22,29 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#home" class="nav-link" id="home" data-page="home">Home</a></li>
-            <li><a href="#about" class="nav-link" id="about" data-page="about">About me</a></li>
+            <li><a href="#home" class="nav-link" id="home-link" data-page="home">Home</a></li>
+            <li><a href="#about" class="nav-link" id="about-link" data-page="about">About me</a></li>
           </ul>
         </nav>
       </header>
-      <div class="home page active" id="home">
+      <section class="home page active" id="home-page">
         <div class="hero" id="hero">
-
+          <div class="main-article hero-article" id="article"></div>
         </div>
-      </div>
+        <div class="card" id="home-card">
+        </div>
+        <div class="home-btn">
+          <button type="button" class="view-more" id="view-more">View More</button>
+        </div>
+      </section>
+      <section class="article page" id="article-page">
+
+      </section>
+      <section class="about page" id="about-page"></section>
+      <footer>
+        <p><strong>My Learning Journal</strong></p>
+        <p>Copyright ©2022</p>
+      </footer>
     </div>
 
     <script type="module" src="./scripts/script.js"></script>

@@ -10,6 +10,16 @@ body {
   padding: 0;
 }
 
+body {
+  background-color: #646363;
+}
+
+/* To delete */
+
+.home {
+  display: none;
+}
+
 /* ===============
      Layout pages
    =============== */
@@ -18,7 +28,15 @@ body {
   width: 100%;
   max-width: 390px;
   margin: 0 auto;
-  background-color: aquamarine;
+  background-color: white;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
 }
 
 /* Header */
@@ -42,7 +60,7 @@ nav {
 
 ul {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 /* Footer */
@@ -74,6 +92,16 @@ footer {
 
 /* Cards */
 
+.card {
+  width: 340px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+
+.blog {
+  padding-bottom: 2rem;
+}
+
 /* ==========
    Typography
    ========== */
@@ -95,8 +123,14 @@ h1 {
   padding-bottom: 0.6rem;
 }
 
+h3 {
+  padding-bottom: 0.4rem;
+}
+
 h2,
-p {
+p,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -132,9 +166,41 @@ footer p {
   display: block;
 }
 
+.card-img {
+  width: 340px;
+}
+
 /* ==========
      Buttons
    ========== */
+
+.home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.5rem;
+}
+
+.view-more {
+  background: white;
+  border: none;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.view-more:hover,
+.view-more:focus {
+  background-color: rgb(60, 21, 204);
+  color: white;
+  text-decoration: none;
+}
 
 /* ==========
       Links
@@ -148,7 +214,10 @@ a {
 a:hover,
 a:focus {
   font-weight: bold;
-  color: blue;
+  background-color: rgb(60, 21, 204);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 /* ==========
