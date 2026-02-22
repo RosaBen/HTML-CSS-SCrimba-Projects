@@ -54,11 +54,15 @@ footer {
   padding: 1.5rem;
 }
 
-/* Home page */
-
-.home-page {
-  /* display: none; */
+.page {
+  display: none;
 }
+
+.page.active {
+  display: block;
+}
+
+/* Home page */
 
 .hero-post {
   position: relative;
@@ -80,7 +84,6 @@ footer {
   width: 100%;
   max-width: 340px;
   margin: 0 auto;
-  display: none;
 }
 
 .author-journey {
@@ -193,108 +196,21 @@ footer p {
   color: white;
   text-decoration: none;
 }
-/* 
-
- */
-
-/* .home-page {
-  display: none;
-}
- */
-
-/* article page */
-
-/* .article-page {
-  display: grid;
-  grid-template-columns: 0.05rem 1fr 0.05rem;
-  gap: 1rem;
-  grid-template-areas:
-    ".... prev ...."
-    ".... imga ...."
-    ".... desc ...."
-    ".... rect ...."
-    ".... card ....";
-}
-
-.post-article {
-  grid-area: prev;
-}
-
-.author-description {
-  grid-area: desc;
-}
-
-.recent-posts {
-  grid-area: rect;
-  text-align: center;
-} */
-
-/* Footer */
-
-/*  */
-
-/* Cards */
-/* .cards {
-  grid-template-columns: 2rem 1fr 2rem;
-  grid-area: card;
-  grid-template-areas:
-    ".. cd1 .."
-    ".. cd2 .."
-    ".. cd3 ..";
-}
-
-.card-one {
-  grid-area: cd1;
-}
-
-.card-two {
-  grid-area: cd2;
-}
-
-.card-three {
-  grid-area: cd3;
-}
-
-.card {
-  width: 100%;
-  max-width: 390px;
-  margin: 0 auto;
-  padding: 1rem 1rem;
-} */
-
-/* 
-
-
-
-
-
-.hero-post {
-  color: white;
-}
-
-
-.preview-date {
-  font-size: 0.9rem;
-} */
-
-/* .hero-post img {
-  width: 100%;
-  max-width: 390px;
-}
-
-.card img,
-.article-img {
-  width: 358px;
-  border-radius: 2px;
-}
-
-.article-img {
-  grid-area: imga;
-} */
 
 /* ==========
       Links
    ========== */
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+a:hover,
+a:focus {
+  font-weight: bold;
+  color: blue;
+}
 
 /* ==========
    Responsive

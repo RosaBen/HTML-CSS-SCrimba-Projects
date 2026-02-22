@@ -4,6 +4,11 @@ import { cards, headContent, articles } from "./data.js";
 const homePage = document.getElementById("home-page");
 const viewMoreBtn = document.getElementById("view-more");
 const articlePage = document.getElementById("article-page");
+const navLinks = document.querySelectorAll("[data-page]");
+const pages = document.querySelectorAll(".page");
+
+console.log(navLinks);
+
 
 // HTML contents
 
@@ -66,12 +71,37 @@ const getCards = (array) => {
   return displayCardsHtml;
 };
 
+// Navigation
+
+const navigatePage = () => {
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetPage = this.dataset.page;
+
+      pages.forEach(page => {
+        page.classList.remove("active");
+      });
+
+      document.getElementById(targetPage + "-page").classList.add("active");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+};
+
+navigatePage();
+
 
 // Addeventlistener
 
-viewMoreBtn.addEventListener("click", function () {
-  homePage.style.display = "none";
-  articlePage.style.display = "block";
+viewMoreBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  homePage.classList.remove("active");
+  articlePage.classList.add("active");
   window.scrollTo({
     top: 0,
     behavior: "smooth"
