@@ -14,8 +14,6 @@ body {
   background-color: #646363;
 }
 
-/* To delete */
-
 /* ===============
      Layout pages
    =============== */
@@ -271,3 +269,95 @@ a:focus {
 /* ==========
    Responsive
    ========== */
+
+@media (min-width: 900px) {
+  .container {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  /* home */
+  header {
+    padding: 0 3rem;
+    height: 80px;
+  }
+
+  .hero-img img {
+    max-width: 900px;
+  }
+
+  .hero-article {
+    width: 600px;
+    padding-left: 3rem;
+    padding-top: 22rem;
+  }
+
+  /* article */
+
+  .article.page.active {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-areas: ". main ." ". jour ." ". recp ." ". card .";
+  }
+
+  .article-img img {
+    width: 100%;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .journeys {
+    grid-area: jour;
+  }
+
+  .recent-posts {
+    grid-area: recp;
+  }
+
+  /* card */
+  .card-img {
+    width: 100%;
+  }
+  .article.page.active .card {
+    width: 100%;
+    display: grid;
+    grid-area: card;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    grid-template-areas:
+      "cd1 cd2 cd3"
+      "cd4 cd5 cd6";
+  }
+
+  .home.page.active .card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2rem repeat(3, minmax(0, 1fr)) 2rem;
+    gap: 1rem;
+    grid-template-areas:
+      ". cd1 cd2 cd3 ."
+      ". cd4 cd5 cd6 .";
+  }
+
+  .card1 {
+    grid-area: cd1;
+  }
+  .card2 {
+    grid-area: cd2;
+  }
+  .card3 {
+    grid-area: cd3;
+  }
+  .card4 {
+    grid-area: cd4;
+  }
+  .card5 {
+    grid-area: cd5;
+  }
+  .card6 {
+    grid-area: cd6;
+  }
+}

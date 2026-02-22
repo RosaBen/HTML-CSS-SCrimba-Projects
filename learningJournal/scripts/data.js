@@ -1,5 +1,6 @@
 export const cards = [
   {
+    id: 1,
     date: "JULY 23, 2022",
     poster: "./images/card-one.png",
     description: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
@@ -8,6 +9,7 @@ export const cards = [
 
   },
   {
+    id: 2,
     date: "JULY 23, 2022",
     poster: "./images/card-two.png",
     description: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
@@ -16,10 +18,38 @@ export const cards = [
 
   },
   {
+    id: 3,
     date: "JULY 23, 2022",
     poster: "./images/card-three.png",
     description: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
     title: "Blog three",
+    alt: "laptop open with a small cactus on its side showing some coding"
+
+  },
+  {
+    id: 4,
+    date: "JULY 23, 2022",
+    poster: "./images/card-four.png",
+    description: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
+    title: "Blog four",
+    alt: "laptop open with a small cactus on its side showing some coding"
+
+  },
+  {
+    id: 5,
+    date: "JULY 23, 2022",
+    poster: "./images/card-five.png",
+    description: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
+    title: "Blog five",
+    alt: "laptop open with a small cactus on its side showing some coding"
+
+  },
+  {
+    id: 6,
+    date: "JULY 23, 2022",
+    poster: "./images/card-six.png",
+    description: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
+    title: "Blog six",
     alt: "laptop open with a small cactus on its side showing some coding"
 
   }

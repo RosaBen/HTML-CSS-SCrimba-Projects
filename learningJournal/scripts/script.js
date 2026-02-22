@@ -25,20 +25,22 @@ const getMainArticle = (array) => {
 const getMainImg = (array) => {
   const { poster, alt } = array;
   return `
-    <img src="${poster}" alt="${alt}">
+    <img src="${poster}" alt="${alt}" class="main-img">
   `;
 };
 
 const getCards = (array) => {
 
   const showCards = array.map(card => {
-    const { date, poster, alt, description, title } = card;
+    const { date, poster, alt, description, title, id } = card;
     return `
+    <div class="grid-card card${id}">
     <img src="${poster}" alt="${alt}" class="card-img">
     <div class="blog">
     <p class="date">${date}</p>
     <h3>${title}</h3>
     <p>${description}</p>
+    </div>
     </div>
     `;
   }).join("");
