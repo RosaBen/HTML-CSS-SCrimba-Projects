@@ -56,8 +56,13 @@ footer {
 
 /* Home page */
 
+.home-page {
+  /* display: none; */
+}
+
 .hero-post {
   position: relative;
+  margin-bottom: 1rem;
 }
 
 #hero-article {
@@ -67,6 +72,34 @@ footer {
   top: 4rem;
   left: 1rem;
   margin: 0;
+}
+
+/* Article page */
+
+.article-page {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  display: none;
+}
+
+.author-journey {
+  margin-bottom: 2rem;
+}
+
+#article .main-text {
+  padding-bottom: 1rem;
+}
+
+/* Cards */
+
+.cards {
+  width: 340px;
+  margin: 0 auto;
+}
+
+.card {
+  padding-bottom: 1.3rem;
 }
 
 /* ==========
@@ -84,22 +117,37 @@ h1 {
   font-size: 0.85rem;
 }
 
-h2 {
+#hero-article h2 {
   font-size: 1.5rem;
   margin: 0;
+  padding-bottom: 0.6rem;
+}
+
+.article-page h3 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
 p {
   font-size: 0.9rem;
   line-height: 1.5;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 .date {
   font-size: 0.7rem;
+  margin: 0;
+  padding-bottom: 0.4rem;
 }
 
 footer p {
+  margin: 0;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  text-align: start;
   margin: 0;
 }
 
@@ -110,6 +158,41 @@ footer p {
 .hero-img {
   width: 390px;
 }
+
+.card-img {
+  width: 340px;
+  border-radius: 0.3rem;
+}
+
+/* ==========
+     Buttons
+   ========== */
+.button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.view-more {
+  background: white;
+  border: none;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.view-more:hover,
+.view-more:focus {
+  background-color: rgb(60, 21, 204);
+  color: white;
+  text-decoration: none;
+}
 /* 
 
  */
@@ -117,16 +200,7 @@ footer p {
 /* .home-page {
   display: none;
 }
-
-
-
-.hero-article {
-  position: absolute;
-  z-index: 1;
-  top: 4rem;
-  left: 1rem;
-  width: 344px;
-} */
+ */
 
 /* article page */
 
@@ -192,10 +266,7 @@ footer p {
 
 
 
-h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
+
 
 .hero-post {
   color: white;
@@ -224,26 +295,6 @@ h3 {
 /* ==========
       Links
    ========== */
-
-/* ==========
-     Buttons
-   ========== */
-/* .button {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.view-more {
-  background: white;
-  border: none;
-  font-family: "Roboto Flex", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-} */
 
 /* ==========
    Responsive
