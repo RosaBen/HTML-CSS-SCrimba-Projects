@@ -151,7 +151,7 @@ h1 {
   padding-bottom: 1rem;
 }
 
-h3 {
+h4 {
   padding-bottom: 0.4rem;
 }
 
@@ -276,6 +276,33 @@ a:focus {
     max-width: 900px;
   }
 
+  /* Typos */
+
+  .title {
+    gap: 0.7rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+
   /* home */
   header {
     padding: 0 3rem;
@@ -305,6 +332,27 @@ a:focus {
     width: 100%;
   }
 
+  /* about */
+
+  .about.page.active {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-areas: ". abot ." ". jour ." ". recp ." ". card .";
+  }
+
+  .about-article {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  /* grid-area */
+
+  .about-article {
+    grid-area: abot;
+  }
+
   .main {
     grid-area: main;
   }
@@ -321,7 +369,8 @@ a:focus {
   .card-img {
     width: 100%;
   }
-  .article.page.active .card {
+  .article.page.active .card,
+  .about.page.active .card {
     width: 100%;
     display: grid;
     grid-area: card;

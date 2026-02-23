@@ -38,7 +38,7 @@ const getCards = (array) => {
     <img src="${poster}" alt="${alt}" class="card-img">
     <div class="blog">
     <p class="date">${date}</p>
-    <h3>${title}</h3>
+    <h4>${title}</h4>
     <p>${description}</p>
     </div>
     </div>
