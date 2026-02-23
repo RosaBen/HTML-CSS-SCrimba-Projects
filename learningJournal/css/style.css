@@ -270,10 +270,10 @@ a:focus {
    Responsive
    ========== */
 
-@media (min-width: 900px) {
+@media (min-width: 820px) {
   .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 820px;
   }
 
   /* Typos */
@@ -283,7 +283,7 @@ a:focus {
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   h3 {
@@ -310,13 +310,13 @@ a:focus {
   }
 
   .hero-img img {
-    max-width: 900px;
+    max-width: 820px;
   }
 
   .hero-article {
     width: 600px;
     padding-left: 3rem;
-    padding-top: 22rem;
+    padding-top: 18rem;
   }
 
   /* article */
@@ -408,5 +408,62 @@ a:focus {
   }
   .card6 {
     grid-area: cd6;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    max-width: 1900px;
+  }
+
+  /* Typos */
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem !important;
+    padding: 2rem 0;
+  }
+
+  h3 {
+    font-size: 2.1rem !important;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  .journeys div {
+    padding-bottom: 3rem;
+  }
+
+  .journeys div p {
+    padding: 0;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  /* home */
+  .hero-img img {
+    width: 100%;
+    max-width: 1900px;
+  }
+
+  .hero-article {
+    width: 1000px;
   }
 }

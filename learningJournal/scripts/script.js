@@ -52,10 +52,12 @@ const getJourneys = array => {
   const showJourneys = array.map(journey => {
     const { title, par1, par2 } = journey;
     return `
-          <h4>${title}</h4>
+    <div>
+      <h4>${title}</h4>
       <p>${par1}</p>
       <br>
       <p>${par2}</p>
+    </div>
     `;
   }).join("");
 
